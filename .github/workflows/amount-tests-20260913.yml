@@ -1,0 +1,11 @@
+name: Expense Tracker Amount Tests
+on:
+  push:
+    branches: [main]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run amount tests
+        run: node tests/amount_validation.js
